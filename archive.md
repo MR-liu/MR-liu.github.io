@@ -2,9 +2,9 @@
 bg: "tag.jpg"
 layout: page
 permalink: /posts/
-title: "Archive"
+title: "博客"
 crawlertitle: "All articles"
-summary: "Posts about jekyll"
+summary: "这里收集的是我自己一些文章的列表"
 active: archive
 ---
 

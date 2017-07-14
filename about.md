@@ -4,16 +4,16 @@ layout: page
 title: "About"
 crawlertitle: "Why and how this blog was created"
 permalink: /about/
-summary: "About this blog"
+summary: "欢迎来到我的博客"
 active: about
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+感谢github，使用这个写博客真的是很酷。感谢jekyll，这个是个非常好用的静态博客工具，强烈推荐。 [jekyll.com](http://jekyll.com/)
 
-You can find the source code for the Jekyll new theme at:
-{{site.twitter_username}} /
+使用了主题来自
 [jekyll-new](https://github.com/jglovier/jekyll-new)
+还是很好看的
 
-You can find the source code for Jekyll at
-{{site.github_username}} /
-[jekyll](https://github.com/jekyll/jekyll)
+这个博客只是一家之言
+文章可能来自网络，也有来自自己的总结，希望能借这个平台整理自己的知识。
+也欢迎大家在看到有出错的地方时候联系我EMAIL，让我修正！
