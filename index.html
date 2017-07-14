@@ -1,31 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>MY BOLG</title>
-	<style>
-		/* css reset */
-		div,p,ul,li,a,img,span,h1,h2,h3,h4,h5,h6,header,footer,section,article,form,input,textarea,video,iframe{margin:0;padding:0;}
-		body,html{margin:0;padding:0;}
-		img{display:block;width:100%;}
-		ul,li{list-style:none;}
-		a{text-decoration:none;}
-		a,input{outline:none;cursor:pointer;}
-		textarea{overflow:hidden;}
-		.clearfix:after{display:block;visibility:hidden;font-size:0;clear:both;width:0;height:0;content:'.';}
-		body{background:#f4f4f4;}
-		
-		/* css */
-		section{width:1200px;margin:0 auto;}
-		h1{text-align:center;line-height:120px;}
-		p{text-align:center;}
-	</style>
-</head>
-<body>
-	<section>
-		<h1>this is my blog！</h1>
-		<p>来人，喂叶志斌吃饼！</p>
-		<a href="./blog/js_1.html">来人</a>
-	</section>
-</body>
-</html>
+---
+bg: "rails.jpg"
+layout: default
+crawlertitle: "Jekyll blog"
+title: "Voyager"
+summary: "main page"
+---
+
+{% for post in site.posts limit: 5 %}
+  <article class="index-page">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    {{ post.excerpt }}
+  </article>
+{% endfor %}
