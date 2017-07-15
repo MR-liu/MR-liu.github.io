@@ -3,7 +3,7 @@ bg: "tag.jpg"
 layout: page
 permalink: /posts/
 title: "博客"
-crawlertitle: "All articles"
+crawlertitle: "所有的博客"
 summary: "这里收集的是我自己一些文章的列表"
 active: archive
 ---

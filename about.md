@@ -1,8 +1,8 @@
 ---
 bg: "owl.jpg"
 layout: page
-title: "About"
-crawlertitle: "Why and how this blog was created"
+title: "关于"
+crawlertitle: "关于这个博客"
 permalink: /about/
 summary: "欢迎来到我的博客"
 active: about
