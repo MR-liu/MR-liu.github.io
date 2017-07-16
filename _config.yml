@@ -28,7 +28,7 @@ permalink: /:categories/:title/
 future: true
 safe: false
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: ""
 
 # Theme settings
 compress_html:
@@ -43,3 +43,5 @@ sass:
 
 
 images: '/assets/images'
+
+
