@@ -31,7 +31,7 @@ brew install nodejs
 
 等待安装完成。
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102236621-953845369.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/1.png" alt="">
 
 3.接下来来安装文档数据库 mongoDB 
 
@@ -42,15 +42,15 @@ brew install nodejs
 brew install mongodb
 {% endhighlight %}
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102325090-1054582090.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/2.png" alt="">
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102440496-353823942.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/3.png" alt="">
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102457402-1856708010.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/4.png" alt="">
 
 等待安装完成
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102517011-809936703.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/5.png" alt="">
 
 4.接下来安装缓存 redis 
 
@@ -61,17 +61,17 @@ brew install mongodb
 brew install redis
 {% endhighlight %} 
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102542902-1855007423.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/6.png" alt="">
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102548418-1272356944.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/7.png" alt="">
 
 5.所有的安装完成 进行测试 在终端中输入vi test.js 创建一个测试文件
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102612121-1111081529.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/8.png" alt="">
 
 按确定键
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102632074-1896368870.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/9.png" alt="">
 
 输入：
 
@@ -80,7 +80,7 @@ brew install redis
 console.log(‘你好，nodejs’);
 {% endhighlight %}
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102644433-1391153221.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/10.png" alt="">
 
 按ESC 退出到命令行 按
 
@@ -92,7 +92,7 @@ console.log(‘你好，nodejs’);
 
 6.输入node test.js执行那段代码
 
-<img src="http://images2015.cnblogs.com/blog/686021/201609/686021-20160902102656543-1059452304.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nodeInstall/11.png" alt="">
 
 7.到此nodejs开发环境搭建完成。可以借助sublime， WebStorm等IDE工具进行开发。
 
