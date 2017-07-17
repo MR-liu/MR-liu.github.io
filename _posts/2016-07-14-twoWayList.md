@@ -1,36 +1,36 @@
 ---
 bg: "tools.jpg"
 layout: post
-title:  "使用JS模拟单向链表"
-crawlertitle: "JS模拟单向链表"
-summary: "JS模拟单向链表"
-date:   2017-07-14 10:09:47 +0800
+title:  "使用JS模拟双向链表"
+crawlertitle: "JS模拟双向链表"
+summary: "JS模拟双向链表"
+date:   2017-07-17 15:09:47 +0800
 categories: posts
 tags: ['数据结构']
 author: LZJ
 ---
-链表是一种物理存储单元上非连续、非顺序的存储结构，数据元素的逻辑顺序是通过链表中的指针链接次序实现的。链表由一系列结点（链表中每一个元素称为结点）组成，结点可以在运行时动态生成。每个结点包括两个部分：一个是存储数据元素的数据域，另一个是存储下一个结点地址的指针域。
+双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。
 
-相比于线性表顺序结构，操作复杂。由于不必须按顺序存储，链表在插入的时候可以达到O(1)的复杂度，比另一种线性表顺序表快得多，但是查找一个节点或者访问特定编号的节点则需要O(n)的时间，而线性表和顺序表相应的时间复杂度分别是O(logn)和O(1)。
+<img src="http://img.my.csdn.net/uploads/201211/17/1353130061_1546.png" alt="">
 
-<img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=0dfd76b003087bf469e15fbb93ba3c49/91ef76c6a7efce1b8d7e8131ae51f3deb58f65f7.jpg" alt="">
-
-使用JS模拟出链表的结构
+使用JS模拟出双向链表的结构
 
 首先，需要创建一个链表节点结构。我们使用构造函数形式进行模拟。
+双向链表与单向链表不同，每个节点都有一个前驱，指向前面的节点。
 
 
 {% highlight js %}
 	/*
-	*  param：单链表的特点是有节点以及节点指向的下一个节点的地址
+	*  param：单链表的特点是有节点以及节点后继指向的下一个节点的地址
+	*  param：单链表的特点是有节点以及节点前驱指向的前一个节点的地址
 	*  return：element指的是节点值
-	*  return：next是下一个节点的位置
 	 */
 
 	var Node = function(element) {
-	  this.element = element;
-	  this.next = null;
-	}
+        this.element = element;
+        this.next = null;
+        this.pre = null;
+    }
 
 {% endhighlight %}
 
@@ -43,10 +43,10 @@ author: LZJ
 	 */
 
 	var LinkedList = function() {
-	    this.head = new Node(null);//new出头结点
-	    this.length = 0;
-	    this.value = 'head';
-	}
+    	this.head = new Node(null);
+    	this.length = 0;
+    	this.value = 'head';
+    }
 
 
 {% endhighlight %}
