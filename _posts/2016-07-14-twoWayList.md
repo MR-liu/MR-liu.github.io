@@ -11,7 +11,7 @@ author: LZJ
 ---
 双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。
 
-<img src="http://img.my.csdn.net/uploads/201211/17/1353130061_1546.png" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E9%93%BE%E8%A1%A8.jpg" alt="">
 
 使用JS模拟出双向链表的结构
 
@@ -34,7 +34,7 @@ author: LZJ
 
 {% endhighlight %}
 
-接下来，我们需要模拟出链表的。
+接下来，我们需要模拟出双向链表的。
 
 {% highlight js %}
 	/*
@@ -51,27 +51,31 @@ author: LZJ
 
 {% endhighlight %}
 
-基本的链表就建立了，我们需要向链表中添加节点。编写增加节点方法。
+基本的双向链表就建立了，我们需要向双向链表中添加节点。编写增加节点方法。
 
 头插法：
-<img src="http://see.xidian.edu.cn/cpp/uploads/allimg/140709/1-140F9152T3201.jpg" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E5%8F%8C%E5%90%91%E5%88%97%E8%A1%A8%E5%A4%B4%E6%8F%92.png" alt="">
 {% highlight js %}
 	/*
 	*  param：头插法，在链表的前面插入节点
 	*  return：element是传入节点的值
 	 */
 
-	LinkedList.prototype.appendHead = function(element) {
-		let nextChild = new Node(element);//新建節點
-		nextChild.next = this.head.next;//
-		this.head.next = nextChild;
-		this.length++;
-	};
+	let nextChild = new Node(element);
+
+	if (this.head.next) {
+		nextChild.next = this.head.next;
+    	this.head.next.pre = nextChild
+	}  
+
+	nextChild.pre = this.head;
+	this.head.next = nextChild;
+	this.length++;	
 
 {% endhighlight %}
 
 尾插法
-<img src="http://img2.imgtn.bdimg.com/it/u=3984852701,646563853&fm=26&gp=0.jpg" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E5%8F%8C%E5%90%91%E5%88%97%E8%A1%A8%E5%B0%BE%E6%8F%92%E6%B3%95.png" alt="">
 {% highlight js %}
 	/*
 	*  param：尾插法，在链表的后面插入节点
@@ -84,12 +88,14 @@ author: LZJ
             head = head.next;
         }
         head.next = next;
+        next.pre = head;
         this.length++
 	};
 {% endhighlight %}
 
 指定位置增加
-<img src="http://img1.imgtn.bdimg.com/it/u=3885900004,1516156657&fm=26&gp=0.jpg" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E5%8F%8C%E5%90%91%E5%88%97%E8%A1%A8%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%8F%92%E5%85%A5.png" alt="">
+
 {% highlight js %}
 	/*
 	*  param：指定位置增加，在链表指定位置插入节点
@@ -104,7 +110,9 @@ author: LZJ
 		if (index<0 || index>this.length) return;
 		for (var i = 0; i<index; i++){
 			if (i === index-1) {
+				indexEle.pre = node;
 				indexEle.next = node.next;
+				node.next.pre = indexEle
 				node.next = indexEle;
 				this.length++;
 			} else {
@@ -115,7 +123,7 @@ author: LZJ
 {% endhighlight %}
 
 删除节点
-<img src="http://img3.imgtn.bdimg.com/it/u=2583993628,2824655199&fm=26&gp=0.jpg" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E5%8F%8C%E5%90%91%E5%88%97%E8%A1%A8%E5%88%A0%E9%99%A4%E8%8A%82%E7%82%B9.png" alt="">
 {% highlight js %}
 	/*
 	*  param：指定位置删除节点
@@ -128,6 +136,7 @@ author: LZJ
 		if (index<0 || index>this.length) return;
 		for (let i = 0; i < index; i++){
 			if (i === index-1) {
+				node.next.next.pre = node;
 				node.next = node.next.next;
 			} else {
 				node = node.next;
@@ -138,6 +147,7 @@ author: LZJ
 {% endhighlight %}
 
 指定位置替换修改节点值
+<img src="http://liuzejin.top/assets/images/showHow/twoWay/%E5%8F%8C%E5%90%91%E5%88%97%E8%A1%A8%E6%8C%87%E5%AE%9A%E4%BD%8D%E7%BD%AE%E6%8F%92%E5%85%A5.png" alt="">
 {% highlight js %}
 	/*
 	*  param：指定位置修改节点
@@ -153,6 +163,8 @@ author: LZJ
 		for (var i = 0; i<index; i++){
 			if (i === index-1) {
 				indexEle.next = node.next.next;
+				indexEle.pre = node;
+				node.next.next.pre = indexEle;
 				node.next = indexEle;
 			} else {
 				node = node.next;
@@ -235,12 +247,14 @@ author: LZJ
 			node = node.next;
 		}
 		
+		head.next.pre = null;
+		head.next = null;
 		for (let i = length; i > 0 ; i--){
 			if (arr[i] !== null) {
-				head.next = new Node(arr[i]);
-				head = head.next;
+				this.appendNext(arr[i]);
 			}
 		}
+		this.getListLength();
 	}
 {% endhighlight %}
 
@@ -261,8 +275,3 @@ new出链表使用方法查看链表
 
 	console.log(list);
 {% endhighlight %}
-<style>
-	.font-12{
-		line-height: 10px;font-size: 12px; margin: 4px 0; color: #2d2d2d;
-	}
-</style>
