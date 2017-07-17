@@ -18,7 +18,7 @@ author: LZJ
 
 1.把下载后的nvm解压到一个全英文路径下，解压后的样子：
 
-<img src="https://app.yinxiang.com/shard/s72/res/db570cca-f31e-4819-984c-633c66caba96" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/1.png" alt="">
 
 2.打开nvm里的settings.txt(如果官网下载的nvm中没有这个文件，自己新建一个也行)，然后配置里面的内容。
 
@@ -32,7 +32,7 @@ author: LZJ
 
 如下图为我的配置，我在E盘新建了一个mynode文件夹来存放nvm文件夹：
 
-<img src="https://app.yinxiang.com/shard/s72/res/1cc7567f-eee8-43bd-95a6-0c58fa8756e9" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/2.png" alt="">
 
 3.右击“计算机”－属性－高级系统设置－环境变量，在用户变量中新建：
 
@@ -44,11 +44,11 @@ author: LZJ
 
 然后一路确定下去，下图为我的配置；
 
-<img src="https://app.yinxiang.com/shard/s72/res/4143b2c5-a156-4699-bdb9-c61419731e84" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/3.png" alt="">
 
 3.打开cmd，输入set NVM_HOME（和set NVM_SYMLINK）可以看到你已经配置了此环境变量，然后输入nvm ls可以查看你拥有的node的版本号，输入nvm use 版本号便是你所要使用哪个版本的node了，此命令输完后便发现你所配置的node快捷方式所在的目录下多了nodejs这个快捷方式。如下图为我的操作：
 
-<img src="https://app.yinxiang.com/shard/s72/res/53dc5051-064c-4b25-add1-a6b8716c5927" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/4.png" alt="">
 
 此时node就配置成功啦！
 
@@ -56,7 +56,7 @@ author: LZJ
 
 在cmd中输入nvm install 最新node版本号，时间有点长，耐心等会，升级成功后再使用nvm use 版本号即可。如下
 
-<img src="https://app.yinxiang.com/shard/s72/res/3eb5c017-b5e7-4c30-82e0-d1dbd3c6659e" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/5.png" alt="">
 
 配置node的下载路径
 
@@ -64,7 +64,7 @@ nvm默认的下载地址是http://nodejs.org/dist/，这是国外的服务器，
 
 在控制台输入nvm，我们看到了
 
-<img src="https://app.yinxiang.com/shard/s72/res/83344143-d3ac-440d-bfca-59bfe09365d4" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/6.jpg" alt="">
 
 好像是有设置下载镜像的命令，但是我配置了一下，不行。查看issues发现好像是作者忘记加上去了= =。
 
@@ -76,7 +76,7 @@ node_mirror: https://npm.taobao.org/mirrors/node/
 
 npm_mirror: https://npm.taobao.org/mirrors/npm/
 
-<img src="https://app.yinxiang.com/shard/s72/res/0c8949fe-7cb5-4758-af96-f3f2886cf3d8" alt="">
+<img src="http://liuzejin.top/assets/images/showHow/nvm/7.jpg" alt="">
 
 通过 nvm 安装任意版本的 node
 
