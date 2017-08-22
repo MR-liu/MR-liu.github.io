@@ -1,65 +1,9 @@
-## Voyager
+感谢github，使用这个写博客真的是很酷。感谢jekyll，这个是个非常好用的静态博客工具，强烈推荐。 [jekyll.com](http://jekyll.com/)
 
-Just another jekyll theme. Demo: <http://redvi.github.io/voyager>
+使用了主题来自
+[jekyll-new](https://github.com/jglovier/jekyll-new)
+还是很好看的
 
-### Feathures:
-
-All HTML files are compressed (see `_layouts/compress.html`).
-
-**Post**
-
-All post settings can be changed. Example:
-
-```
----
-layout: post
-bg: '2016/background.jpg'
-title: "Post Heading"
-crawlertitle: "page title"
-summary: "post description"
-date: 2016-06-29
-tags : ['front-end']
-slug: post-url
-author: "Author"
-categories: posts
----
-```
-
-`bg` is a path to background of your article. By default backgrounds are placed in the `assets/images` directory.
-
-**Page**
-
-If page contains `active` tag, it will be show on site menu.
-
-```
----
-layout: page
-title: "About"
-permalink: /about/
-active: about
----
-```
-
-**Archive**
-
-Archive page is sorting posts by tags. No more than one tag in one post.
-
-Good:
-
-```
-tags : ['front-end']
-```
-
-Bad:
-
-```
-tags : ['front-end', 'jekyll']
-```
-
-Don't forget to change `_config.yml`.
-
-## Production environment
-
-Build for production:
-
-`JEKYLL_ENV=production jekyll build`
+这个博客只是一家之言
+文章可能来自网络，也有来自自己的总结，希望能借这个平台整理自己的知识。
+也欢迎大家在看到有出错的地方时候联系我EMAIL，让我修正！
